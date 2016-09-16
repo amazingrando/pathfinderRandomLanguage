@@ -29,8 +29,8 @@ var selection = pickRandomProperty(json[langGroup]);
 function allLanguages(json) {
     for (var key in json) {
       if (json.hasOwnProperty(key)) {
-        var languageListForOutput = json[key].replace(',',', ');
-        $('#allLanguages').append('<h4>'+key+'</h4>' + '<p>'+ json[key] + '</p>');
+        var ListOfLanguages = json[key].join(', ');
+        $('#allLanguages').append('<h4>'+key+'</h4>' + '<p>'+ ListOfLanguages + '</p>');
       }
     }
 }
